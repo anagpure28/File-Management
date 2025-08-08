@@ -23,7 +23,7 @@ function App() {
       </main>
       
       <footer className="app-footer">
-        <p>Built with React, Node.js, Express, and MongoDB</p>
+        <p>File Management</p>
       </footer>
     </div>
   );

@@ -86,7 +86,7 @@ const FileList = ({ refreshTrigger }) => {
               {file.mimetype.startsWith("image/") ? (
                 <div className="file-preview2">
                   <img 
-                    src={`http://localhost:5000/uploads/${file.filename}`} 
+                    src={`https://file-management-1-wz8x.onrender.com/uploads/${file.filename}`} 
                     alt={file.originalName}
                     onError={(e) => {
                       e.target.style.display = 'none';
