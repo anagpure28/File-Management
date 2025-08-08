@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 const fileRoutes = require('./routes/files');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -19,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/filemanagement', {
+mongoose.connect(`${process.env.mongo_url}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
