@@ -10,8 +10,8 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: "https://file-management-jet.vercel.app/", // allow React dev server
-  credentials: true                // allow cookies/auth headers if needed
+  origin: "https://file-management-jet.vercel.app",
+  credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
