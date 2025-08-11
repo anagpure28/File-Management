@@ -146,7 +146,7 @@ const File = require('../models/File');
 
 const router = express.Router();
 
-const baseUrl = process.env.BASE_URL || 'http://localhost:5000';
+const baseUrl = process.env.BASE_URL || 'https://file-management-pssi.onrender.com';
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
