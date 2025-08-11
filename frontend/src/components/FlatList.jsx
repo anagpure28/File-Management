@@ -36,7 +36,6 @@ const FileList = ({ refreshTrigger }) => {
     if (window.confirm(`Are you sure you want to delete "${filename}"?`)) {
       try {
         await fileAPI.deleteFile(fileId);
-        alert("File deleted successfully");
         fetchFiles();
       } catch (error) {
         console.error("Delete error:", error);
@@ -83,10 +82,10 @@ const FileList = ({ refreshTrigger }) => {
           {files.map((file) => (
             <div key={file._id} className="file-card">
 
-              {file.mimetype.startsWith("image/") ? (
+              {/* {file.mimetype.startsWith("image/") ? (
                 <div className="file-preview2">
                   <img 
-                    src={`https://file-management-1-wz8x.onrender.com/uploads/${file.filename}`} 
+                    src={file.publicUrl} 
                     alt={file.originalName}
                     onError={(e) => {
                       e.target.style.display = 'none';
@@ -101,11 +100,11 @@ const FileList = ({ refreshTrigger }) => {
                  <div className="file-icon-container">
                    <span className="file-icon">{getFileIcon(file.mimetype)}</span>
                  </div>
-               )}
+               )} */}
 
               <div className="file-header">
                 <span className="file-name" title={file.originalName}>
-                  {file.originalName}
+                  {file.originalName.replace(/\.[^/.]+$/, "")}
                 </span>
               </div>
 

@@ -229,13 +229,13 @@ body {
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   border-color: rgba(52, 152, 219, 0.3);
 }
-
+/* 
 .file-header {
   display: flex;
   align-items: center;
   margin-bottom: 1.25rem;
   gap: 1rem;
-}
+} */
 
 .file-icon {
   font-size: 1.75rem;
@@ -250,15 +250,29 @@ body {
   flex-shrink: 0;
 }
 
+.file-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
 .file-name {
-  font-weight: 600;
-  color: #2c3e50;
+  display: inline-block;
+  background-color: #e0f4ff; /* Light blue background */
+  color: #0077b6; /* Darker text */
+  padding: 6px 10px;
+  border-radius: 9px; /* Fully rounded */
+  font-weight: 500;
+  font-size: 0.95rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: center;
   white-space: nowrap;
   flex: 1;
-  font-size: 1.1rem;
+  border: 2px solid #b3e0f5;
 }
+
 
 .file-details {
   margin-bottom: 1.75rem;
