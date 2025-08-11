@@ -117,10 +117,10 @@ A full-stack web application for uploading, managing, and downloading files with
 
 ```bash
 # Test health endpoint
-curl https://file-management-pssi.onrender.com/api/health
+curl https://file-management-2-31uy.onrender.com/api/health
 
 # Test file list
-curl https://file-management-pssi.onrender.com/api/files
+curl https://file-management-2-31uy.onrender.com/api/files
 ```
 
 ## API Documentation
