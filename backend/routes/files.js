@@ -146,7 +146,7 @@ const File = require('../models/File');
 
 const router = express.Router();
 
-const baseUrl = process.env.BASE_URL || 'https://file-management-pssi.onrender.com';
+const baseUrl = process.env.BASE_URL || 'https://file-management-2-31uy.onrender.com/';
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
@@ -200,7 +200,7 @@ router.post('/upload', upload.array('files', 10), async (req, res) => {
         originalName: file.originalname,
         filename: file.filename,
         path: path.join(__dirname, '../uploads', file.filename), // local path for backend usage
-        publicUrl: `${baseUrl}/uploads/${file.filename}`, // store public URL separately
+        publicUrl: `${baseUrl}uploads/${file.filename}`, // store public URL separately
         size: file.size,
         mimetype: file.mimetype
       });
@@ -227,7 +227,7 @@ router.get('/', async (req, res) => {
 
     const filesWithUrl = files.map(file => ({
       ...file.toObject(),
-      publicUrl: `${baseUrl}/uploads/${file.filename}`
+      publicUrl: `${baseUrl}uploads/${file.filename}`
     }));
 
     res.json(filesWithUrl);
