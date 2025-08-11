@@ -184,7 +184,7 @@ const upload = multer({
   storage: storage,
   fileFilter: fileFilter,
   limits: {
-    fileSize: 10 * 1024 * 1024 // 10MB limit
+    fileSize: 20 * 1024 * 1024 // 10MB limit
   }
 });
 
@@ -223,7 +223,7 @@ router.get('/', async (req, res) => {
   try {
     const files = await File.find().sort({ uploadDate: -1 });
 
-    const baseUrl = process.env.BASE_URL || 'http://localhost:5000';
+    const baseUrl = process.env.BASE_URL || 'https://file-management-2-31uy.onrender.com/';
 
     const filesWithUrl = files.map(file => ({
       ...file.toObject(),
